@@ -11,7 +11,7 @@
 
 @import '../../components/header/header.css';
 @import '../../components/nav/nav.css';
-@import '../../components/button/button.css';
+@import '../../components/dropdown/dropdown.css';
 @import '../../components/image/image.css';
 
 @import '../../pages/home/home.css';
