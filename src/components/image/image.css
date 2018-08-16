@@ -1,0 +1,10 @@
+.image {
+  @media (--tablet-landscape) {
+    display: inline-block;
+    margin: 0 10px 10px;
+  }
+
+  img {
+    width: 100%;
+  }
+}

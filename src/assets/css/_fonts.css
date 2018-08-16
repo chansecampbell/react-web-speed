@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Font family variables */
+:root {
+  --font-lato: "Lato", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+/* Better font rendering */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+span,
+input,
+label,
+textarea,
+time,
+button,
+address {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Font sizing */
+html {
+  font-size: 62.5%;
+  text-size-adjust: 100%;
+}

@@ -1,0 +1,49 @@
+.gallery {
+  text-align: center;
+  
+  &__intro {
+    padding: 20px;
+    margin-bottom: 20px;
+
+    h1 {
+      font: normal normal normal 2.4rem/3.2rem var(--font-lato);
+      color: var(--color-fiord);
+    }
+
+    p {
+      font: normal normal normal 1.4rem/2.2rem var(--font-montserrat);
+      color: var(--color-fiord);
+      max-width: 475px;
+      margin: 0 auto;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+
+    @media (--tablet-landscape) {
+      display: block;
+    }
+  }
+
+  &__image {
+    &--loading {
+      display: block;
+      height: 300px;
+      width: 100%;
+      background: red;
+
+      @media (--tablet-portrait) {
+        height: 200px;
+      }
+
+      @media (--tablet-landscape) {
+        display: inline-block;
+        margin: 0 10px 10px;
+        height: 300px;
+        width: 300px;
+      }
+    }
+  }
+}

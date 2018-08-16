@@ -1,0 +1,28 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+   "at-rule-no-unknown": [ true, {
+     "ignoreAtRules": [
+        "else",
+        "extends",
+        "include",
+        "mixin",
+        "if",
+        "content",
+        "function",
+        "return",
+        "define-mixin"
+      ]
+      }],
+    "declaration-empty-line-before": "never",
+    "number-leading-zero": "never",
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "order/properties-alphabetical-order": true
+  }
+}

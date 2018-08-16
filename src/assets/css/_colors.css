@@ -1,0 +1,16 @@
+/*doc
+---
+title: Colours
+name: colours
+category: Colour Palette
+---
+
+Color Palette for the WBSTL redesign
+
+*/
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-aqua: #28defe;
+  --color-fiord: #414868;
+}

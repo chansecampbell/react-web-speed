@@ -1,0 +1,14 @@
+/* doc
+---
+title: Z-Index
+name: z-index
+category: Base
+---
+
+Z-Index elements order
+
+*/
+:root {
+  --z-index-header-mobile-hamburger: 10000;
+  --z-index-header-mobile-nav: 9900;
+}

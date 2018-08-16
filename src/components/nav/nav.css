@@ -1,0 +1,46 @@
+.nav {
+  position: absolute;
+  z-index: var(--z-index-header-mobile-nav);
+  background-color: var(--color-fiord);
+
+    @media (--to-tablet-landscape) {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+      width: 100%;
+      top: 0;
+      transform: translateY(-100%);
+      transition-timing-function: ease-in-out;
+      transition: 0.4s;
+    }
+
+    @media (--tablet-landscape) {
+      right: 20px;
+    }
+
+    &--open {
+      @media (--to-tablet-landscape) {
+        transform: translateY(0);
+      }
+    }
+
+  a {
+    color: var(--color-white);
+    font: normal normal bold 1.8rem/2.6rem var(--font-montserrat);
+    padding: 20px 0;
+    text-decoration: none;
+    transition-timing-function: ease-in-out;
+    transition: 0.4s;
+
+    &:hover {
+      color: var(--color-aqua);
+    }
+
+    @media (--tablet-landscape) {
+      font-size: 1.4rem;
+      padding: 0 10px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+/*doc
+---
+title: Mixins
+name: mixins
+category: Mixins
+---
+
+*/
+@define-mixin z-index $index: 1 {
+  z-index: $index;
+}
+
+/**
+ * Visually hidden
+ *
+ */
+@define-mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/**
+ * Remove visually hidden
+ *
+ */
+@define-mixin visually-hidden--off {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: normal;
+  width: auto;
+}

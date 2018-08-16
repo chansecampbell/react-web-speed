@@ -1,0 +1,30 @@
+/*doc
+---
+title: Breakpoints
+name: Breakpoints
+category: Breakpoints
+---
+
+List of breakpoints used in the website
+
+*/
+/* Passing as variables */
+:root {
+  --mobile-portrait: 320px;
+  --mobile-landscape: 480px;
+  --tablet-portrait: 768px;
+  --tablet-landscape: 1024px;
+  --desktop: 1280px;
+  --wide-desktop: 1440px;
+  --extra-wide-desktop: 1920px;
+}
+
+/* Defining the media queries */
+@custom-media --mobile-portrait (min-width: 320px);
+@custom-media --mobile-landscape (min-width: 480px);
+@custom-media --tablet-portrait (min-width: 768px);
+@custom-media --tablet-landscape (min-width: 1024px);
+@custom-media --to-tablet-landscape (max-width: 1023px);
+@custom-media --desktop (min-width: 1280px);
+@custom-media --wide-desktop (min-width: 1440px);
+@custom-media --extra-wide-desktop (min-width: 1920px);

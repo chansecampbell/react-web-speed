@@ -1,0 +1,19 @@
+.home {
+  text-align: center;
+  overflow: hidden;
+  
+  &__intro {
+    max-width: 475px;
+    margin: 0 auto;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font: normal normal normal 5rem/4.8rem var(--font-lato);
+      color: var(--color-fiord);
+      padding: 0 20px;
+    }
+  }
+}
