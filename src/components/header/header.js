@@ -15,7 +15,7 @@ const Header = (props) => {
 
   return (
     <header className="header">
-      <h1>React Web Speed</h1>
+      <h1>React Mobile Web</h1>
       { this.hamburgerMenu }
       { this.nav } 
     </header>
