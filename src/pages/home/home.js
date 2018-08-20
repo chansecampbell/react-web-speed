@@ -23,6 +23,16 @@ class PageHome extends React.Component {
           content: "One slight issue with using React Loadable to asynchronously load components is that there is no way of of the library knowing what’s on or off the screen. If you’d like to use the library to essentially lazy load offscreen components only when needed, then you’re in luck but you’ll need an additional wrapper library which has been approved by the makers of of the original. React Loadable Visibility does just this, utilising the Intersection Observer to allow for lazily loaded React components right when you need them. Please note, browser support for the Intersection Observer is limited, however adding a polyfill will help - and the library is designed to fall back to good old fashioned React Loadable if no support can be found.",
           open: false
         },
+        { 
+          title: "4. Caching with PWAs",
+          content: "Content to be added..",
+          open: false
+        },
+        { 
+          title: "5. Managing push notifications via a PWA",
+          content: "Content to be added..",
+          open: false
+        },
       ]
     }
 

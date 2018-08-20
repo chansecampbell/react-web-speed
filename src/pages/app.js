@@ -8,7 +8,7 @@ function loadingComponent({ error }) {
   if (error) {
     return 'Error!';
   } else {
-    return <h3>Loading...</h3>;
+    return <div className="app__loading"><h3>Loading...</h3></div>;
   }
 }
 

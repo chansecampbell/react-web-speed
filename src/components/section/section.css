@@ -1,0 +1,5 @@
+.section {
+  padding: 10px;
+  color: var(--color-fiord);
+  font: normal normal normal 1.2rem/2rem var(--font-montserrat);
+}
