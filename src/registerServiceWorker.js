@@ -35,7 +35,6 @@ export default function register() {
       if (isLocalhost) {
         // This is running on localhost. Lets check if a service worker still exists or not.
         checkValidServiceWorker(swUrl);
-
         // Add some additional logging to localhost, pointing developers to the
         // service worker/PWA documentation.
         navigator.serviceWorker.ready.then(() => {
@@ -74,6 +73,7 @@ function registerValidSW(swUrl) {
             }
           }
         };
+        askPermission();
       };
     })
     .catch(error => {
@@ -106,6 +106,42 @@ function checkValidServiceWorker(swUrl) {
         'No internet connection found. App is running in offline mode.'
       );
     });
+}
+
+function askPermission() {
+  console.log('ASKING PERMISSION');
+  return new Promise(function(resolve, reject) {
+    const permissionResult = Notification.requestPermission(function(result) {
+      resolve(result);
+    });
+
+    if (permissionResult) {
+      permissionResult.then(resolve, reject);
+    }
+  })
+  .then(function(permissionResult) {
+    if (permissionResult !== 'granted') {
+      throw new Error('We weren\'t granted permission.');
+    } else {
+      subscribeUserToPush();
+    }
+  });
+}
+
+function subscribeUserToPush() {
+  return navigator.serviceWorker.register('service-worker.js')
+  .then(function(registration) {
+    const subscribeOptions = {
+      userVisibleOnly: true,
+      applicationServerKey: 'BE6oNX4ILxiiy0UszU9OyOhUubAr1lYU0_8WYFidRrYcSHDw87muhv57bXsAXsQFzxlBkoGG4290F_yW91oZClA'
+    };
+
+    return registration.pushManager.subscribe(subscribeOptions);
+  })
+  .then(function(pushSubscription) {
+    console.log('Received PushSubscription: ', JSON.stringify(pushSubscription));
+    return pushSubscription;
+  });
 }
 
 export function unregister() {
